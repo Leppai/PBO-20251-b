@@ -1,11 +1,13 @@
 <?php
 
+namespace App\Math;
+
 class LuasLingkaran{
     public const phi = 3.14;
 
-    public int $r;
+    private int $r;
 
-    public function __construct($rValue = 2) {
+    public function __construct($rValue = 1) {
         echo "ini dari construct WHEN YAHHH  <br>";
         $this->r = $rValue;
     }
@@ -25,8 +27,6 @@ class LuasLingkaran{
     }
 }
 
-$lingkaran = new LuasLingkaran(14);
-// $lingkaran->r = 12;
-$lingkaran->tampil('roda'); //method tampil
 
-LuasLingkaran::testing(); //static method
+
+// LuasLingkaran::testing(); //static method
