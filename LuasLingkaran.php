@@ -6,12 +6,25 @@ class LuasLingkaran {
 
     public int $jari;
 
+    public function tampil($nama = 'ban') : void { 
+        $rumus = LuasLingkaran::phi * ($this->jari * $this->jari);
+        echo "Lingkaran {$nama} ini hasil nya adalah: {$rumus}";
+    }
+
+    public static function testing() {
+        echo "<br/>";
+        echo "ini testing static";
+    }
+
 }
 
 $lingkaran = new LuasLingkaran();
 $lingkaran->jari = 14;
+$lingkaran->tampil("roda");
 
-$rumus = LuasLingkaran::phi * ($lingkaran->jari * $lingkaran->jari);
+LuasLingkaran::testing();
 
-echo "Hasil nya adalah: " . $rumus;
+// $rumus = LuasLingkaran::phi * ($lingkaran->jari * $lingkaran->jari);
+
+// echo "Hasil nya adalah: " . $rumus;
 ?>
