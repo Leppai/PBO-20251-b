@@ -6,6 +6,11 @@ class LuasLingkaran {
 
     public int $jari;
 
+    public function __construct($isiJari = 1) {
+        $this->jari = $isiJari;
+        echo "ini construct <br/>";
+    }
+
     public function tampil($nama = 'ban') : void { 
         $rumus = LuasLingkaran::phi * ($this->jari * $this->jari);
         echo "Lingkaran {$nama} ini hasil nya adalah: {$rumus}";
@@ -16,10 +21,15 @@ class LuasLingkaran {
         echo "ini testing static";
     }
 
+    public function __destruct() {
+        echo "<br/>";
+        echo "udah ah cape malasss (ini destruct)";
+    }
+
 }
 
-$lingkaran = new LuasLingkaran();
-$lingkaran->jari = 14;
+$lingkaran = new LuasLingkaran(10);
+// $lingkaran->jari = 14;
 $lingkaran->tampil("roda");
 
 LuasLingkaran::testing();
