@@ -9,7 +9,7 @@ class LuasLingkaran {
 }
 
 $lingkaran = new LuasLingkaran();
-$lingkaran->jari = 10;
+$lingkaran->jari = 14;
 
 $rumus = LuasLingkaran::phi * ($lingkaran->jari * $lingkaran->jari);
 
